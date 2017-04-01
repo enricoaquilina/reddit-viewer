@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      {{item.title}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <div *ngIf="item.preview">
+      <img *ngIf="item.preview.images[0].source" src="{{item.preview.images[0].source.url}}"/>
+      <img *ngIf="item.preview.images[0].variants.gif" src="{{item.preview.images[0].variants.gif.source.url}}"/>
+    </div>
+    <ion-item>
+      <ion-icon name="person" item-left></ion-icon>
+      Redditor
+      <ion-note item-right>
+        {{item.author}}
+      </ion-note>
+    </ion-item>
+    <ion-item item-left>
+      <a ion-button block target="_blank" href="http://reddit.com/{{item.permalink}}">View on Reddit</a>
+    </ion-item>
+  </ion-card>
+</ion-content>

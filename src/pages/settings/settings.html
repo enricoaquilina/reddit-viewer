@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Settings
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (submit)="setDefaults()">
+    <ion-list>
+      <ion-item>
+        <ion-label fixed>Category</ion-label>
+        <ion-select [(ngModel)]="category" name="category">
+          <ion-option value="machinelearning">Machine Learning</ion-option>
+          <ion-option value="earthporn">Earth Porn</ion-option>
+          <ion-option value="bitcoin">Bitcoin</ion-option>
+          <ion-option value="ethereum">Ethereum</ion-option>
+          <ion-option value="internetisbeautiful">Internet is Beautiful</ion-option>
+          <ion-option value="gonewild">NSFW</ion-option>
+          <ion-option value="milf">NSFW2</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Limit</ion-label>
+        <ion-select [(ngModel)]="limit" name="limit">
+          <ion-option value="5">5</ion-option>
+          <ion-option value="10">10</ion-option>
+          <ion-option value="15">15</ion-option>
+          <ion-option value="20">20</ion-option>
+          <ion-option value="25">25</ion-option>
+          <ion-option value="30">30</ion-option>
+          <ion-option value="35">35</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Ranking</ion-label>
+        <ion-select [(ngModel)]="ranking" name="ranking">
+          <ion-option value="hot">Hot</ion-option>
+          <ion-option value="top">Top</ion-option>
+          <ion-option value="new">New</ion-option>
+          <ion-option value="rising">Rising</ion-option>
+          <ion-option value="gilded">Gilded</ion-option>
+          <ion-option value="controversial">Controversial</ion-option>
+        </ion-select>
+      </ion-item>
+      <button ion-button type="submit" block>Save Changes</button>
+    </ion-list>
+  </form>
+</ion-content>
