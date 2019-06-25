@@ -9,7 +9,7 @@
 <ion-content padding>
   <ion-card>
     <div *ngIf="item.preview">
-      <img *ngIf="item.preview.images[0].source" src="{{item.preview.images[0].source.url}}"/>
+      <img *ngIf="item.preview.images[0].source" src="{{item.preview.images[0].source.url.replace('amp;', '')}}"/>
       <img *ngIf="item.preview.images[0].variants.gif" src="{{item.preview.images[0].variants.gif.source.url}}"/>
     </div>
     <ion-item>

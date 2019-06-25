@@ -27,7 +27,7 @@
       </ion-card-title>
     </ion-card-content>
     <div *ngIf="item.data.preview">
-      <img *ngIf="item.data.preview.images[0].source" src="{{item.data.preview.images[0].source.url}}"/>
+      <img *ngIf="item.data.preview.images[0].source" src="{{item.data.preview.images[0].source.url.replace('amp;', '')}}"/>
       <img *ngIf="item.data.preview.images[0].variants.gif" src="{{item.data.preview.images[0].variants.gif.source.url}}"/>
     </div>
     <ion-item>
